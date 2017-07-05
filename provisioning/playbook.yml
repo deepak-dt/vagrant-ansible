@@ -1,6 +1,5 @@
 ---
 - hosts: all
-  #become: yes
   vars: 
     createuser: 'vagrant'
     createpassword: 'vagrant'
@@ -19,7 +18,6 @@
         key="{{ lookup('file', '/home/{{ createuser }}/.ssh/id_rsa.pub') }}"
         path='/home/{{ createuser }}/.ssh/authorized_keys'
         manage_dir=no
-        #path='/home/{{ createuser }}/.ssh/authorized_keys'
 
     #- name: Sudoers | update sudoers file and validate
     #  lineinfile: "dest=/etc/sudoers

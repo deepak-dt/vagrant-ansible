@@ -51,31 +51,31 @@ Vagrant.configure("2") do |config|
   
   config.vm.define "node1" do |machine|
       machine.vm.network "private_network", ip: "172.17.177.21"
-	  
-	  config.vm.provider "virtualbox" do |vb|
-	      vb.gui = true
-	      vb.cpus = 1
-	      vb.memory = "2048"
+  
+      config.vm.provider "virtualbox" do |vb|
+          vb.gui = true
+          vb.cpus = 1
+          vb.memory = "2048"
       end
   end
     
   config.vm.define "node2" do |machine|
       machine.vm.network "private_network", ip: "172.17.177.22"
-	  
-	  config.vm.provider "virtualbox" do |vb|
-	      vb.gui = true
-	      vb.cpus = 1
-	      vb.memory = "2048"
+  
+      config.vm.provider "virtualbox" do |vb|
+          vb.gui = true
+          vb.cpus = 1
+          vb.memory = "2048"
       end
   end
     
   config.vm.define 'controller' do |machine|
     machine.vm.network "private_network", ip: "172.17.177.11"
     
-	config.vm.provider "virtualbox" do |vb|
-	    vb.gui = true
-	    vb.cpus = 1
-	    vb.memory = "2048"
+    config.vm.provider "virtualbox" do |vb|
+        vb.gui = true
+        vb.cpus = 1
+        vb.memory = "2048"
     end
   
     machine.vm.provision :ansible_local do |ansible|
