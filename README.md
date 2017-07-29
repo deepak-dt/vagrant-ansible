@@ -10,6 +10,6 @@
 4. Goto directory vagrant-ansible
 
 5. Bring-up the VMs
-    vagrant up
+    vagrant up --provision
 	
 REF: https://www.vagrantup.com/docs/provisioning/ansible_local.html#options
